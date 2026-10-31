@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NTOU 電機學習島 | EE Learning Island</title>
+<style>
+:root{--navy:#09263d;--blue:#075e85;--cyan:#16b8c5;--sand:#fff2d7;--ink:#173647;--muted:#587282;--line:#dce8ed}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--ink);background:#f2fafb}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:3px solid #ffb94d;outline-offset:3px}.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 72% 12%,#167b96 0,transparent 40%),linear-gradient(135deg,#08273e,#075b79 60%,#099fa7);padding:30px max(5%,calc((100% - 1200px)/2)) 100px}.hero:after{content:"";position:absolute;left:-8%;right:-8%;height:100px;bottom:-64px;background:#f2fafb;border-radius:50% 50% 0 0}.top{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:.07em}.brand small{display:block;color:#a8e7ed;font-size:12px;letter-spacing:.16em}.top a{color:#e0fbfc;text-decoration:none;font-weight:700}.hero-main{max-width:680px;margin:72px 0 0}.eyebrow{text-transform:uppercase;font-size:13px;letter-spacing:.23em;color:#b7f3f1;font-weight:800}.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.12;margin:14px 0 22px;letter-spacing:.045em}.hero p{font-size:17px;line-height:1.9;color:#d8f1f2;max-width:540px}.hero .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.tag{border:1px solid #ffffff50;border-radius:30px;padding:8px 14px;font-size:13px;background:#ffffff12}.shell{max-width:1200px;margin:0 auto;padding:20px 24px 80px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:26px 0 20px}.section-head h2{font-size:30px;margin:0 0 8px}.section-head p{margin:0;color:var(--muted)}.search{background:white;border:1px solid var(--line);border-radius:20px;padding:14px 18px;min-width:240px;box-shadow:0 5px 20px #10394c0a}.search input{width:100%;border:none;outline:0;color:var(--ink)}.map{position:relative;min-height:600px;overflow:hidden;border-radius:32px;background:radial-gradient(ellipse at 20% 18%,#8ee0dd 0,transparent 33%),radial-gradient(ellipse at 82% 75%,#4cc2c5 0,transparent 40%),linear-gradient(145deg,#93e6e4,#0b8ea6);border:10px solid #fff;box-shadow:0 20px 60px #0d506323}.map:before{content:"";position:absolute;inset:0;background:repeating-radial-gradient(ellipse at 15% 30%,transparent 0 35px,#ffffff1c 36px 38px,transparent 39px 90px);pointer-events:none}.map-label{position:absolute;top:22px;left:25px;color:#075873;font-weight:900;background:#e6fffcbb;padding:9px 15px;border-radius:20px;letter-spacing:.06em}.island{position:absolute;width:clamp(160px,22%,240px);min-height:155px;border:0;color:#20422e;border-radius:47% 53% 48% 52% / 47% 46% 54% 53%;background:radial-gradient(ellipse at 50% 32%,#f7eab1 0 50%,#e7c987 55% 64%,#f6f6d1 68%,transparent 74%),#78bb78;box-shadow:0 14px 0 #d2be86,0 20px 0 7px #f6fcdf8c,0 28px 22px #07425c40;transform:rotate(var(--rot,0deg));transition:transform .25s,filter .25s;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:15px}.island:hover,.island.active{transform:translateY(-10px) rotate(var(--rot,0deg)) scale(1.035);filter:drop-shadow(0 10px 7px #063d5240)}.island.active{outline:4px solid #fff;outline-offset:7px}.island .emoji{font-size:45px;filter:drop-shadow(1px 5px 1px #3f5a3544)}.island strong{font-size:clamp(16px,2vw,22px)}.island span:last-child{font-size:12px;color:#486146;font-weight:700}.i0{top:16%;left:12%;--rot:-7deg}.i1{top:10%;right:14%;--rot:8deg}.i2{top:39%;left:39%;--rot:4deg}.i3{bottom:11%;left:10%;--rot:8deg}.i4{bottom:11%;right:10%;--rot:-6deg}.boat{position:absolute;right:10%;top:41%;font-size:45px;transform:rotate(-16deg);pointer-events:none}.hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:#065772;background:#eafffdde;border-radius:30px;padding:9px 18px;white-space:nowrap;font-weight:800;font-size:13px}.panel{margin:24px 0 35px;border-radius:28px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 35px #0b465411;padding:28px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:20px}.panel-head h3{margin:0;font-size:26px}.panel-head p{color:var(--muted);margin:8px 0 0}.count{background:#e3f8f4;color:#007a76;padding:8px 14px;border-radius:30px;font-weight:800}.course-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:12px;margin-top:23px}.course{border:1px solid var(--line);text-align:left;padding:18px;border-radius:17px;background:#fbfefe;transition:.2s}.course:hover{border-color:#21b4bb;box-shadow:0 7px 19px #109ca21c;transform:translateY(-2px)}.course b{display:block;margin-bottom:9px}.course small{color:var(--muted);line-height:1.6}.course .arrow{display:block;text-align:right;color:#008b99}.subhead{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:50px}.subhead h2{margin:0;font-size:27px}.subhead p{color:var(--muted);margin:9px 0}.pick{display:flex;gap:10px;flex-wrap:wrap}.pick button{border:1px solid #afd8d7;background:white;border-radius:16px;padding:13px 18px;font-weight:700;color:#28606a}.pick button[aria-pressed="true"]{background:#087d82;color:white;border-color:#087d82}.pick button:disabled{opacity:.48;cursor:not-allowed} .recommendations{margin-top:24px;padding:24px;border:1px solid #b8e0df;border-radius:24px;background:linear-gradient(130deg,#fff,#eafbfa)}.recommendations[hidden]{display:none}.rec-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.rec-heading h3{font-size:23px;margin:0}.rec-intro{color:#4c6c78;line-height:1.8}.rec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:18px 0}.rec-card{border:1px solid #d6e9e9;border-radius:18px;background:white;padding:18px}.rec-card.best{border:2px solid #09949b;box-shadow:0 5px 20px #0c9fa21d}.rec-card h4{margin:0 0 8px;font-size:17px}.rec-card p{font-size:13px;line-height:1.7;color:#516f79}.rec-score{font-weight:800;color:#087985}.rec-bar{background:#e3f0f0;height:9px;border-radius:20px;overflow:hidden;margin:10px 0}.rec-bar>div{background:linear-gradient(90deg,#18bbc1,#087b86);height:100%;border-radius:20px}.rec-action{border:1px solid #087b86;border-radius:12px;padding:8px 12px;background:white;color:#087b86;font-weight:700}.rec-note{font-size:12px;color:#607880;line-height:1.7}@media(max-width:700px){.rec-grid{grid-template-columns:1fr}}.progress{margin:20px 0;background:#d9eff0;border-radius:50px;height:15px;overflow:hidden}.progress>div{width:0;height:100%;background:linear-gradient(90deg,#16b8bb,#0c7a89);transition:width .25s}.track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}.track-card{padding:22px;border:1px solid var(--line);border-radius:20px;background:white}.track-card .symbol{font-size:34px}.track-card h3{margin:10px 0}.track-card p{color:var(--muted);line-height:1.8;margin:0}.muted-note{background:#e8f5f8;border-radius:14px;padding:15px 18px;font-size:13px;color:#4d6975;line-height:1.7;margin-top:26px}.footer{text-align:center;padding:35px 20px 50px;color:#6e8592;font-size:13px}.empty{color:var(--muted);padding:28px}.dialog{border:0;border-radius:24px;max-width:510px;width:calc(100% - 35px);padding:32px;box-shadow:0 25px 90px #06344466}.dialog::backdrop{background:#03283991}.dialog h3{margin:0 0 12px;font-size:27px}.dialog p{line-height:1.9;color:#54707e}.close{float:right;border:0;border-radius:50%;background:#e8f2f4;width:35px;height:35px}.dialog-label{font-size:12px;color:#078b91;font-weight:800;letter-spacing:.12em}@media(max-width:700px){.hero{padding:25px 22px 88px}.hero-main{margin-top:55px}.shell{padding:15px 13px 50px}.section-head{align-items:stretch;flex-direction:column}.map{min-height:650px;border-width:5px}.island{width:40%;min-height:142px}.i0{top:10%;left:6%}.i1{top:11%;right:5%}.i2{top:37%;left:30%}.i3{bottom:11%;left:6%}.i4{bottom:11%;right:5%}.boat{right:10%;top:36%;font-size:28px}.hint{font-size:11px;bottom:6px}.track{grid-template-columns:1fr}.panel{padding:20px}.panel-head{align-items:flex-start}.panel-head h3{font-size:23px}}
+
+
+/* 島上角色導覽：讓學生與系主任真的像站在島上 */
+.map{min-height:720px}
+.map:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 12%,#ffffff4f 0 22px,transparent 23px),radial-gradient(circle at 23% 10%,#ffffff42 0 16px,transparent 17px),radial-gradient(circle at 18% 16%,#ffffff40 0 18px,transparent 19px),radial-gradient(circle at 78% 14%,#ffffff3f 0 19px,transparent 20px),radial-gradient(circle at 84% 18%,#ffffff36 0 15px,transparent 16px);pointer-events:none;opacity:.8}
+.island{overflow:visible}
+.island::before{content:"";position:absolute;left:50%;top:20px;transform:translateX(-50%);width:70%;height:28px;border-radius:50%;background:#ffffff22;pointer-events:none}
+.island::after{content:"";position:absolute;bottom:18px;left:50%;transform:translateX(-50%);width:58px;height:18px;border-radius:50%;background:#2d7f2d26;pointer-events:none}
+.guide-unit{position:absolute;z-index:7;display:flex;flex-direction:column;align-items:center;gap:6px}
+.guide-unit .bubble{background:#fff;border:1px solid #d4e8ec;border-radius:18px;padding:7px 12px;font-size:12px;font-weight:800;color:#335a6d;box-shadow:0 9px 18px #06344424;white-space:nowrap}
+.guide-unit .bubble::after{content:"";position:absolute}
+.avatar{border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;gap:5px;cursor:pointer;transition:transform .2s}
+.avatar:hover{transform:translateY(-5px) scale(1.03)}
+.avatar .person{font-size:42px;line-height:1;filter:drop-shadow(0 6px 2px #083a4d50)}
+.avatar .plate{min-width:124px;background:linear-gradient(180deg,#fffef5,#fff5cf);border:2px solid #fff;border-radius:16px;padding:7px 10px;box-shadow:0 10px 20px #07495b3c;text-align:center;color:#193a50}
+.avatar .plate b{display:block;font-size:13px;line-height:1.2}
+.avatar .plate small{display:block;font-size:10px;color:#5e7681;font-weight:700;line-height:1.35;margin-top:3px}
+.avatar.director .person{font-size:48px}
+.avatar.director .plate{background:linear-gradient(180deg,#fff7d9,#ffe8a5);border-color:#fff3c8}
+.avatar .step{width:74px;height:14px;border-radius:30px;background:linear-gradient(180deg,#774e2a,#5a3514);box-shadow:0 4px 0 #c7b08a,0 8px 10px #07455a32}
+.g1{top:12%;left:39%}
+.g2{top:35%;right:11%}
+.g3{bottom:15%;left:28%}
+.g4{bottom:10%;right:32%}
+.gd{top:50%;left:9%}
+.legend-strip{margin-top:14px;padding:16px 18px;border-radius:18px;background:linear-gradient(90deg,#fff7d8,#fffdf1);border:1px solid #f1dfab;display:grid;grid-template-columns:1.1fr 1fr;gap:14px;color:#614d1b}
+.legend-strip h4{margin:0 0 6px;font-size:16px;color:#5c4716}
+.legend-strip p{margin:0;line-height:1.7;font-size:14px}
+.legend-mini{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.legend-mini span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #ead9ad;padding:7px 10px;border-radius:999px;font-size:12px;font-weight:800;color:#355267}
+@media(max-width:700px){
+ .map{min-height:820px}
+ .guide-unit .bubble{font-size:10px;padding:6px 9px}
+ .avatar .person{font-size:28px}
+ .avatar.director .person{font-size:31px}
+ .avatar .plate{min-width:86px;padding:5px 7px;border-radius:12px}
+ .avatar .plate b{font-size:10px}
+ .avatar .plate small{font-size:8px}
+ .avatar .step{width:48px;height:10px}
+ .g1{top:5%;left:45%}
+ .g2{top:30%;right:2%}
+ .g3{bottom:24%;left:2%}
+ .g4{bottom:8%;right:16%}
+ .gd{top:49%;left:2%}
+ .legend-strip{grid-template-columns:1fr;padding:14px}
+}
+
+</style>
+</head>
+<body>
+<header class="hero"><nav class="top"><div class="brand">⚡ NTOU EE <small>LEARNING ISLAND</small></div><a href="#explore">開始探索 ↓</a></nav><div class="hero-main"><div class="eyebrow">Explore · Learn · Connect</div><h1>電機學習島<br>從海洋啟航</h1><p>國立臺灣海洋大學電機工程學系互動式課程地圖。點擊島嶼，認識共同課程、基礎與核心知識，探索六選三與專業學習方向。</p><div class="tags"><span class="tag">🌊 海洋主題互動地圖</span><span class="tag">📚 課程查詢</span><span class="tag">🧭 六大專業方向</span><span class="tag">🎭 島上人物導覽</span></div></div></header>
+<main class="shell" id="explore"><div class="section-head"><div><h2>🗺️ 探索五座學習島</h2><p>點擊島嶼查看課程；也可以搜尋課名或關鍵字。</p></div><label class="search">🔎 <input id="search" placeholder="搜尋課程，例如：訊號與系統" aria-label="搜尋課程"></label></div>
+<div class="map" aria-label="海洋學習島互動地圖"><div class="map-label">NTOU 電機群島</div><button class="island i0 active" data-island="common"><span class="emoji">📖</span><strong>共同課程島</strong><span>人文與通識</span></button><button class="island i1" data-island="foundation"><span class="emoji">🧮</span><strong>基礎課程島</strong><span>數理與程式</span></button><button class="island i2" data-island="core"><span class="emoji">⚡</span><strong>電機核心島</strong><span>專業知識</span></button><button class="island i3" data-island="select"><span class="emoji">🎯</span><strong>六選三島</strong><span>探索興趣</span></button><button class="island i4" data-island="special"><span class="emoji">🧭</span><strong>專業方向島</strong><span>六大學習方向</span></button>
+<div class="guide-unit g1"><div class="bubble">先從數學、物理、程式出發！</div><button class="avatar student freshman" type="button" data-guide="1" aria-label="聽大一學生介紹"><span class="person">🧑‍🎓</span><span class="plate"><b>大一新生</b><small>數理與程式起步</small></span><span class="step"></span></button></div>
+<div class="guide-unit g2"><div class="bubble">核心課程開始變有挑戰！</div><button class="avatar student sophomore" type="button" data-guide="2" aria-label="聽大二學生介紹"><span class="person">👩‍🎓</span><span class="plate"><b>大二學生</b><small>電路與訊號探索</small></span><span class="step"></span></button></div>
+<div class="guide-unit gd"><div class="bubble">歡迎來到海大電機學習島</div><button class="avatar director" type="button" data-guide="director" aria-label="聽系主任導覽"><span class="person">👨‍🏫</span><span class="plate"><b>系主任導覽</b><small>虛擬角色帶你認識學程</small></span><span class="step"></span></button></div>
+<div class="guide-unit g3"><div class="bubble">選三門課，看看自己適合哪邊</div><button class="avatar student junior" type="button" data-guide="3" aria-label="聽大三學生介紹"><span class="person">🧑‍💻</span><span class="plate"><b>大三學生</b><small>六選三與專業探索</small></span><span class="step"></span></button></div>
+<div class="guide-unit g4"><div class="bubble">整合方向，準備專題與未來</div><button class="avatar student senior" type="button" data-guide="4" aria-label="聽大四學生介紹"><span class="person">👩‍🔬</span><span class="plate"><b>大四學生</b><small>專題、升學與職涯</small></span><span class="step"></span></button></div>
+<span class="boat">⛵</span><div class="hint">👆 點島嶼看課程，點人物聽導覽</div></div><div class="legend-strip"><div><h4>🎭 島上角色導覽</h4><p>這一版把老師提到的「島上小人」做成真的站在群島上的互動角色。你可以點擊大一到大四學生，看看不同學習階段會接觸哪些課；也可以點擊虛擬系主任，快速理解整體課程脈絡。</p></div><div class="legend-mini"><span>🧑‍🎓 大一：基礎能力</span><span>👩‍🎓 大二：核心課程</span><span>🧑‍💻 大三：六選三探索</span><span>👩‍🔬 大四：方向整合</span><span>👨‍🏫 系主任：整體導覽</span></div></div>
+<section class="panel" id="courses"><div class="panel-head"><div><h3 id="panelTitle"></h3><p id="panelDesc"></p></div><span class="count" id="count"></span></div><div class="course-grid" id="courseGrid"></div></section>
+<section id="choose"><div class="subhead"><div><h2>🎯 六選三互動挑戰</h2><p>從下列六門課中選出你感興趣的三門，試試自己的學習組合。</p></div><strong id="pickCount">已選 0 / 3</strong></div><div class="pick" id="pickButtons"></div><div class="progress"><div id="bar"></div></div><div id="pickText" style="color:#587282" aria-live="polite">選擇三門課，完成你的探索組合。</div><div class="recommendations" id="recommendations" hidden aria-live="polite"><div class="rec-heading"><h3>🧭 你的專業方向探索報告</h3><button class="rec-action" id="resetPicks" type="button">重新選擇</button></div><p class="rec-intro" id="recIntro"></p><div class="rec-grid" id="recGrid"></div><p class="rec-note">※ 關聯分數是本站依課程主題自訂的探索指標，並非統計機率、個人能力測驗或系上正式分組依據。六門課與六方向名稱參考老師提供的關聯圖；課程對應與職涯範例是網站的建議性整理。</p></div></section>
+<section id="directions"><div class="subhead"><div><h2>🧭 六大專業方向</h2><p>根據提供的系上課程關聯圖整理，幫助你認識不同電機領域。</p></div></div><div class="track" id="tracks"></div></section>
+<p class="muted-note">資料說明：課程名稱與六選三標示依使用者提供的「電機系大學部必修與核心課程關聯圖」整理；各課程簡介與分組介紹為學習導覽用文字，非正式課程大綱。此頁不代表最新入學年度修課規定，實際選課與畢業條件請以海大電機系及教務處公告為準。</p></main>
+<footer class="footer">NTOU EE Learning Island · 以 AI 輔助製作的課程探索作品</footer>
+<dialog id="detail" class="dialog"><button class="close" id="closeDialog" aria-label="關閉">✕</button><div class="dialog-label" id="detailCategory"></div><h3 id="detailTitle"></h3><p id="detailText"></p><p class="muted-note">此為輔助理解的概要介紹，非正式課綱或先修規定。</p></dialog>
+<dialog id="guideDialog" class="dialog"><button class="close" id="closeGuide" aria-label="關閉人物導覽">✕</button><div class="dialog-label" id="guideLabel">互動人物導覽</div><h3 id="guideTitle"></h3><p id="guideText"></p><div class="guide-actions" id="guideActions"></div><p class="muted-note">角色採示意設定；大一到大四人物與系主任皆為網站創作的虛擬導覽角色，沒有使用真實師生肖像。年級建議是學習引導，不是正式課程安排。</p></dialog>
+<script>
+const data={
+common:{title:'📖 共同課程島',desc:'拓展語言、人文、社會素養及校園生活能力。',items:[['國文領域','閱讀、表達與中文寫作能力。'],['外文領域','培養外語理解與溝通能力。'],['歷史領域','透過歷史脈絡理解社會與文化。'],['體育','培養運動習慣與身體素養。'],['勞動服務','透過服務參與學習責任與合作。'],['博雅領域','跨領域探索、拓展多元視角。'],['憲政領域','認識憲政制度與公民議題。']]},
+foundation:{title:'🧮 基礎課程島',desc:'奠定電機工程的數學、物理與資訊基礎。',items:[['微積分','以極限、微分與積分描述變化及累積。'],['工程數學','學習工程問題常用的微分方程及數學工具。'],['線性代數','研究向量、矩陣與線性系統。'],['普通物理','理解力學、電磁等自然現象的基礎概念。'],['普通物理實驗','透過量測與實驗觀察物理現象。'],['計算機概論','認識計算機系統、資料與運算的基本觀念。'],['計算機實習','透過實作建立計算機操作與應用能力。'],['程式語言','學習程式設計與問題分解。']]},
+core:{title:'⚡ 電機核心島',desc:'串起電路、電子、電磁、訊號及實驗的專業基礎。',items:[['機率學','以機率模型描述隨機現象及不確定性。'],['電子學','理解半導體元件及電子電路的工作原理。'],['電路學','運用電壓、電流與網路分析法研究電路。'],['電磁學','研究電場、磁場與電磁作用。'],['交換電路與邏輯設計','運用布林代數與邏輯元件設計數位電路。'],['電工實驗','透過實驗實作理解電機相關電路與量測。'],['電磁波','探討電磁波的傳播與相關現象。'],['訊號與系統','運用時域與頻域工具分析訊號及系統。']]},
+select:{title:'🎯 六選三島',desc:'原始關聯圖標示「六選三（必選）」的六門課程。',items:[['自動控制','以數學模型與回授設計控制系統。'],['通訊工程','認識訊號傳送、調變與通訊系統。'],['半導體物理','研究半導體材料與載子行為。'],['資料結構','學習資料的組織、存取與演算法基礎。'],['複變函數','利用複數分析工具處理數學與工程問題。'],['電機機械','認識電動機、發電機及能量轉換。']]},
+special:{title:'🧭 專業方向島',desc:'認識課程關聯圖列出的六個學習方向。',items:[['通訊與訊號處理組','聚焦通訊系統、訊號分析及處理技術。'],['控制組','探索自動控制、系統建模與回授設計。'],['固態電子組','關注半導體材料、元件與固態電子。'],['電力與電子電路組','研究電力、電子電路與能量應用。'],['電波組','探索電磁波、射頻與電波傳播。'],['資訊科技組','學習程式、資料與資訊系統的應用。']]}
+};
+const mapBtns=[...document.querySelectorAll('[data-island]')],grid=document.querySelector('#courseGrid'),search=document.querySelector('#search');let active='common';
+function show(key,filter=''){active=key;const group=data[key],query=filter.trim().toLowerCase();mapBtns.forEach(b=>{const yes=b.dataset.island===key;b.classList.toggle('active',yes);b.setAttribute('aria-pressed',String(yes))});document.querySelector('#panelTitle').textContent=query?'🔎 搜尋結果':group.title;document.querySelector('#panelDesc').textContent=query?`所有島嶼中符合「${filter}」的課程與方向`:group.desc;grid.replaceChildren();const entries=query?Object.entries(data).flatMap(([k,v])=>v.items.map(item=>({item,k}))).filter(x=>(x.item[0]+' '+x.item[1]).toLowerCase().includes(query)):group.items.map(item=>({item,k:key}));document.querySelector('#count').textContent=`${entries.length} 個項目`;if(!entries.length){const p=document.createElement('p');p.className='empty';p.textContent='沒有符合的結果，請換個關鍵字。';grid.append(p)}for(const e of entries){const b=document.createElement('button');b.className='course';const title=document.createElement('b');title.textContent=e.item[0];const summary=document.createElement('small');summary.textContent=e.item[1];const arrow=document.createElement('span');arrow.className='arrow';arrow.textContent='了解更多 ↗';b.append(title,summary,arrow);b.onclick=()=>openDetail(e.item,data[e.k].title);grid.append(b)}}
+function openDetail(item,category){document.querySelector('#detailCategory').textContent=category;document.querySelector('#detailTitle').textContent=item[0];document.querySelector('#detailText').textContent=item[1];document.querySelector('#detail').showModal()}
+mapBtns.forEach(b=>b.addEventListener('click',()=>{search.value='';show(b.dataset.island);document.querySelector('#courses').scrollIntoView({behavior:'smooth',block:'start'})}));search.addEventListener('input',()=>show(active,search.value));document.querySelector('#closeDialog').onclick=()=>document.querySelector('#detail').close();document.querySelector('#detail').onclick=e=>{if(e.target.id==='detail')e.target.close()};show(active);
+const selected=new Set(),pickBox=document.querySelector('#pickButtons');
+// 依課程領域關聯建立的探索權重（0–3），非官方資料，也不代表實際課程要求。
+const weights={
+ '自動控制':[1,3,0,1,0,1], '通訊工程':[3,0,0,0,2,1],
+ '半導體物理':[0,0,3,2,1,0], '資料結構':[1,1,0,0,0,3],
+ '複變函數':[2,2,1,1,3,0], '電機機械':[0,2,0,3,1,0]
+};
+const prospects=[
+ '無線通訊系統、訊號處理、通訊演算法與數位傳輸',
+ '機器人、自動化設備、智慧控制與系統整合',
+ '半導體元件、晶片製程、材料與元件研發',
+ '電力工程、電力電子、馬達驅動與能源系統',
+ '天線、射頻電路、電磁波傳播與無線量測',
+ '軟體開發、資料處理、資訊系統與嵌入式應用'
+];
+function renderRecommendations(){
+ const root=document.querySelector('#recommendations');root.hidden=selected.size!==3;
+ if(selected.size!==3)return;
+ const chosen=[...selected],results=data.special.items.map(([title,desc],i)=>({title,desc,i,score:chosen.reduce((sum,n)=>sum+weights[n][i],0)})).sort((a,b)=>b.score-a.score||a.i-b.i);
+ const top=results[0].score;
+ document.querySelector('#recIntro').textContent=`你選了 ${chosen.join('、')}。以下列出六大方向與這三門課的主題關聯；最高分方向為「${results.filter(x=>x.score===top).map(x=>x.title).join('、')}」。分數相同代表並列，並不表示其他領域不適合你。`;
+ const grid=document.querySelector('#recGrid');grid.replaceChildren();
+ for(const [rank,r] of results.entries()){
+  const card=document.createElement('article');card.className='rec-card'+(r.score===top?' best':'');
+  const title=document.createElement('h4');title.textContent=(r.score===top?'⭐ ':'')+r.title;
+  const score=document.createElement('div');score.className='rec-score';score.textContent=`主題關聯 ${r.score} / 9`;
+  const bar=document.createElement('div');bar.className='rec-bar';const fill=document.createElement('div');fill.style.width=`${r.score/9*100}%`;bar.append(fill);
+  const related=chosen.filter(n=>weights[n][r.i]>0).sort((a,b)=>weights[b][r.i]-weights[a][r.i]);
+  const reason=document.createElement('p');reason.textContent=related.length?`推薦理由：${related.join('、')}與此方向的知識主題有關聯。${r.desc}`:`這三門課與此方向的直接主題連結較少；${r.desc}`;
+  const future=document.createElement('p');future.textContent=`延伸探索：${prospects[r.i]}。`;
+  card.append(title,score,bar,reason,future);grid.append(card);
+ }
+}
+function renderPicks(){pickBox.replaceChildren();for(const [name] of data.select.items){let chosen=selected.has(name),b=document.createElement('button');b.textContent=(chosen?'✓ ':'＋ ')+name;b.setAttribute('aria-pressed',String(chosen));b.disabled=!chosen&&selected.size===3;b.onclick=()=>{chosen?selected.delete(name):selected.add(name);renderPicks()};pickBox.append(b)}document.querySelector('#pickCount').textContent=`已選 ${selected.size} / 3`;document.querySelector('#bar').style.width=`${selected.size/3*100}%`;document.querySelector('#pickText').textContent=selected.size===3?'🎉 已選滿三門：'+[...selected].join('、')+'。下方是你的專業方向探索報告！':`已選 ${selected.size} 門，請再選 ${3-selected.size} 門以查看專業推薦。`;renderRecommendations()}
+document.querySelector('#resetPicks').onclick=()=>{selected.clear();renderPicks();document.querySelector('#choose').scrollIntoView({behavior:'smooth',block:'start'})};renderPicks();
+const symbols=['📡','🤖','🔬','🔌','🌐','💻'];data.special.items.forEach(([title,desc],i)=>{const card=document.createElement('article');card.className='track-card';const em=document.createElement('div');em.className='symbol';em.textContent=symbols[i];const h=document.createElement('h3');h.textContent=title;const p=document.createElement('p');p.textContent=desc;card.append(em,h,p);document.querySelector('#tracks').append(card)});
+
+// 老師要求的「島上大一到大四學生」及「系主任」：對話式人物導覽
+const guideInfo = {
+ '1':{title:'🧑‍🎓 大一新生：先把基礎打穩',text:'歡迎來到海大電機！我正在探索微積分、普通物理、程式語言和計算機概論。先理解數學、物理與資訊基礎，後續學電路或訊號時會更有方向。這是建議性導覽，不代表官方大一課表。',dest:[['基礎課程島','foundation'],['共同課程島','common']]},
+ '2':{title:'👩‍🎓 大二學生：接觸電機核心',text:'我想多認識電路學、電子學、電磁學與訊號與系統，看看哪種專業知識最有興趣。這些核心概念會連結到各個電機領域，實際修課年度請以系上課表為準。',dest:[['電機核心島','core']]},
+ '3':{title:'🧑‍💻 大三學生：探索六選三',text:'現在可以透過六選三互動挑戰，選三門感興趣的課，看看它們與六大專業方向有什麼連結。系統的推薦只是學習探索，不是正式分流或畢業審查。',dest:[['六選三課程島','select'],['前往六選三挑戰','#choose']]},
+ '4':{title:'👩‍🔬 大四學生：整理方向，準備下一步',text:'到了學習後期，我會回頭整理核心能力，探索通訊、控制、固態電子、電力、電波或資訊科技等領域，思考專題、升學與職涯。這是學習旅程示意，非正式四年課程表。',dest:[['六大專業方向','special'],['查看領域介紹','#directions']]},
+ director:{title:'👨‍🏫 系主任導覽：歡迎探索海大電機',text:'同學們好！歡迎透過電機學習島認識我們的課程脈絡：從共同與數理基礎，到電路、電子、電磁、訊號等核心課程，再探索六選三及六大專業方向。點擊不同島嶼，看看知識如何串起來。注意：這是網站創作的「虛擬系主任導覽台詞」，並非現任系主任本人發言。',dest:[['從基礎課程開始','foundation'],['認識專業方向','special']]}
+};
+const guideDialog=document.querySelector('#guideDialog');
+document.querySelectorAll('[data-guide]').forEach(b=>b.addEventListener('click',()=>{
+ const g=guideInfo[b.dataset.guide];
+ document.querySelector('#guideTitle').textContent=g.title;
+ document.querySelector('#guideText').textContent=g.text;
+ const actions=document.querySelector('#guideActions');actions.replaceChildren();
+ for(const [label,dest] of g.dest){
+  const go=document.createElement('button');go.type='button';go.textContent=label;
+  go.onclick=()=>{guideDialog.close();if(dest.startsWith('#')){document.querySelector(dest).scrollIntoView({behavior:'smooth'})}else{search.value='';show(dest);document.querySelector('#courses').scrollIntoView({behavior:'smooth'})}};
+  actions.append(go);
+ }
+ guideDialog.showModal();
+}));
+document.querySelector('#closeGuide').onclick=()=>guideDialog.close();
+guideDialog.addEventListener('click',e=>{if(e.target===guideDialog)guideDialog.close()});
+
+</script>
+</body></html>
